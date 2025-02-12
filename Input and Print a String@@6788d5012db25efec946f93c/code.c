@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(){
 char num;
-scanf("%s",&num);
-printf("You entered: " "%s",num);
+scanf("%c",&num);
+printf("You entered: " "%c",num);
 
 
 return 0;
