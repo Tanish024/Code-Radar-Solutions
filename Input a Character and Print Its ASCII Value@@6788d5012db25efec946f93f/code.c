@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    char c = 'k';
+    char c;
 
     // Printing only the ASCII value without 'k' or 'is'
     printf("ASCII Value: %d", c);
