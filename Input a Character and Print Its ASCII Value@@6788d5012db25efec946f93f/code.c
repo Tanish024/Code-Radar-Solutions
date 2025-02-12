@@ -1,12 +1,9 @@
-// C program to print
-// ASCII Value of Character
 #include <stdio.h>
-int main()
-{
-	char c = 'k';
+int main() {
+    char c = 'k';
 
-	// %d displays the integer value of a character
-	// %c displays the actual character
-	printf("ASCII Value%c: %d", c, c);
-	return 0;
+    // Printing only the ASCII value without 'k' or 'is'
+    printf("ASCII Value: %d", c);
+
+    return 0;
 }
