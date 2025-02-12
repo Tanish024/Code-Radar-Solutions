@@ -1,8 +1,8 @@
 #include <stdio.h>
     int main(){
         float n;
-        printf("A single floating-point number: ");
+        printf(" ");
         scanf("%f" ,&n);
-        printf("You entered: %g",n);
+        printf(" %g",n);
         return 0;
     }
