@@ -7,6 +7,6 @@ int main()
 
 	// %d displays the integer value of a character
 	// %c displays the actual character
-	printf("ASCII Value: %c is %d", c, c);
+	printf("ASCII Value%c : %d", c, c);
 	return 0;
 }
