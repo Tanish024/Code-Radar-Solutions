@@ -5,12 +5,12 @@ int main(){
     if(n%5==0 && n%11!=0){
         printf("Divisible\n");
     }
-    // else if(n%11!=0){
-    //     printf("Not Divisible\n");
-    // }  
-    else {
+    else if(n%11!=0){
         printf("Not Divisible\n");
-    }
-    return 0;
+    }  
+    // else {
+    //     printf("Not Divisible\n");
+    // }
+    // return 0;
 
 }
