@@ -1,12 +1,33 @@
-# Read input
-N = int(input())
-arr = list(map(int, input().split()))
+#include <stdio.h>
 
-# Check if sorted in non-decreasing order
-is_sorted = all(arr[i] <= arr[i+1] for i in range(N - 1))
-
-# Output result
-if is_sorted:
-    print("Sorted")
-else:
-    print("Not Sorted")
+int main() {
+    int n;
+    
+    // Read the number of elements
+    scanf("%d", &n);
+    
+    int arr[n];
+    int sorted = 1; // Assume sorted unless proven otherwise
+    
+    // Read the array elements
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    // Check if the array is sorted
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < arr[i - 1]) {
+            sorted = 0; // Found an unsorted pair
+            break;
+        }
+    }
+    
+    // Output result
+    if (sorted) {
+        printf("Sorted\n");
+    } else {
+        printf("Not Sorted\n");
+    }
+    
+    return 0;
+}
