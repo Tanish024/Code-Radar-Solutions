@@ -3,30 +3,27 @@
 int main() {
     int n, k;
     scanf("%d", &n);
-    int arr[n];
 
-    // Read the array elements
+    if (n <= 0) return 0;  // no array to process
+
+    int arr[n];
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    // Read the number of rotations
     scanf("%d", &k);
 
-    // Normalize k (in case it's larger than n)
+    // Normalize rotation (k can be > n)
     k = k % n;
 
-    // Temporary array to store rotated version
-    int rotated[n];
-
-    // Rotate left by k positions
-    for(int i = 0; i < n; i++) {
-        rotated[i] = arr[(i + k) % n];
+    // Handle negative rotation (rotate right instead)
+    if (k < 0) {
+        k = k + n;  // convert right rotation to left
     }
 
-    // Print the rotated array
+    // Print rotated array directly without extra array
     for(int i = 0; i < n; i++) {
-        printf("%d \n", rotated[i]);
+        printf("%d ", arr[(i + k) % n]);
     }
 
     return 0;
